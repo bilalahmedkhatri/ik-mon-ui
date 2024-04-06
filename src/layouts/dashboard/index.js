@@ -26,6 +26,7 @@ import image_ from "assets/images/home-decor-2.jpg";
 
 import CardMonitor from "examples/Cards/CardMonitor";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;

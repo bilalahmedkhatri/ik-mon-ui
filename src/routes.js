@@ -38,6 +38,7 @@ Coded by www.azeemlab.com
 // Team Stellar React layouts
 import Dashboard from "layouts/dashboard";
 import UsersTable from "layouts/tables";
+import VideoPlayer from "layouts/video-player";
 import Billing from "layouts/billing";
 import RTL from "layouts/rtl";
 import Notifications from "layouts/notifications";
@@ -64,6 +65,14 @@ const routes = [
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/users",
     component: <UsersTable />,
+  },
+  {
+    type: "collapse",
+    name: "Video",
+    key: "video",
+    icon: <Icon fontSize="small">video_player</Icon>,
+    route: "/video",
+    component: <VideoPlayer />,
   },
   // {
   //   type: "collapse",
