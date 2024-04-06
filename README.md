@@ -1,6 +1,4 @@
-# [Team Stellar React](http://demos.azeemlab.com/material-dashboard-react/#/dashboard?ref=readme-mdr) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.azeemlab.com/product/material-dashboard-react&text=Check%20Material%20Dashboard%202%20react%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#materialdesign%20#react%20https://www.azeemlab.com/product/material-dashboard-react)
-
-![version](https://img.shields.io/badge/version-2.2.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/material-dashboard-react.svg)](https://github.com/creativetimofficial/material-dashboard-react/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/material-dashboard-react.svg)](https://github.com/creativetimofficial/material-dashboard-react/issues?q=is%3Aissue+is%3Aclosed)
+# [Team Stellar React]
 
 ![Image](https://s3.amazonaws.com/creativetim_bucket/products/71/original/material-dashboard-react.jpg?1638950990)
 
@@ -13,19 +11,8 @@ This free MUI & React Dashboard is coming with prebuilt design blocks, so the de
 switching from our pages to the real website is very easy to be done.
 
 Special thanks go to:
+
 - [Nepcha Analytics](https://nepcha.com?ref=readme) for the analytics tool. Nepcha is already integrated with Material Dashboard React. You can use it to gain insights into your sources of traffic.
-
-**Documentation built by Developers**
-
-Each element is well presented in very complex documentation.
-
-You can read more about the [documentation here](https://www.azeemlab.com/learning-lab/react/overview/material-dashboard/).
-
-**Example Pages**
-
-If you want to get inspiration or just show something directly to your clients, you can jump-start your development with our pre-built example pages. You will be able to quickly set up the basic structure for your web project.
-
-View [example pages here](https://demos.azeemlab.com/material-dashboard-react/#/dashboard).
 
 **HELPFUL LINKS**
 
@@ -42,20 +29,6 @@ During the development of this dashboard, we have used many existing resources f
 
 Let us know your thoughts below. And good luck with development!
 
-## Table of Contents
-
-- [Versions](#versions)
-- [Demo](#demo)
-- [Quick Start](#quick-start)
-- [Documentation](#documentation)
-- [File Structure](#file-structure)
-- [Browser Support](#browser-support)
-- [Resources](#resources)
-- [Reporting Issues](#reporting-issues)
-- [Technical Support or Questions](#technical-support-or-questions)
-- [Licensing](#licensing)
-- [Useful Links](#useful-links)
-
 ## Versions
 
 [<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react-logo.png?raw=true" width="60" height="60" />](https://www.azeemlab.com/product/material-dashboard-react?ref=readme-mdr)
@@ -64,12 +37,6 @@ Let us know your thoughts below. And good luck with development!
 | ----- |
 
 | [![Material Dashboard React](https://s3.amazonaws.com/creativetim_bucket/products/71/thumb/material-dashboard-react.jpg?1638950990)](http://demos.azeemlab.com/material-dashboard-react/#/dashboard?ref=readme-mdr)
-
-## Quick start
-
-Quick start options:
-
-- Download from [AzeemLab](https://www.azeemlab.com/product/material-dashboard-react?ref=readme-mdr).
 
 ## Terminal Commands
 
