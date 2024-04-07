@@ -5,6 +5,8 @@ import Divider from "@mui/material/Divider";
 
 // Team Stellar React components
 import MDBox from "components/MDBox";
+import CardVideo from "examples/Cards/CardVideo";
+
 // import MDTypography from "components/MDTypography";
 
 // Team Stellar React example components
@@ -34,6 +36,17 @@ function VideoPlayer() {
               <Divider orientation="vertical" sx={{ ml: -2, mr: 1 }} />
               <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />
               <Divider orientation="vertical" sx={{ mx: 0 }} />
+            </Grid>
+          </Grid>
+        </MDBox>
+        <MDBox mt={4.5}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6} lg={4} key={key}>
+              <MDBox mb={3}>
+                <CardVideo
+                  video=""
+                />
+              </MDBox>
             </Grid>
           </Grid>
         </MDBox>
