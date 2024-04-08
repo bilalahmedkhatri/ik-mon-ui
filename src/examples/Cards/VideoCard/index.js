@@ -10,12 +10,12 @@ import Icon from "@mui/material/Icon";
 
 // Team Stellar React components
 import MDBox from "components/MDBox";
-import ReactPlayer from "react-player";
+import MDTypography from "components/MDTypography";
 
-// CardVideo configurations
-// import configs from "examples/Cards/CardVideo/configs";
+// CardMonitor configurations
+// import configs from "examples/Cards/CardMonitor/configs";
 
-function CardVideo({ video }) {
+function CardMonitor({ video }) {
   return (
     <Card sx={{ height: "100%" }}>
       <MDBox padding="1rem">
@@ -31,19 +31,6 @@ function CardVideo({ video }) {
               shadow="xl"
             >
               {/* for cardmedia check out : https://mui.com/material-ui/api/card-media/ */}
-              <CardMedia
-                src={video}
-                component="video" // "video, audio, picture, iframe, or img"
-                sx={{
-                  maxWidth: "100%",
-                  margin: 0,
-                  boxShadow: ({ boxShadows: { md } }) => md,
-                  objectFit: "cover",
-                  objectPosition: "center",
-                }}
-              >
-                <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />
-              </CardMedia>
             </MDBox>
           ),
           [video]
@@ -53,16 +40,20 @@ function CardVideo({ video }) {
   );
 }
 
-// Setting default values for the props of CardVideo
-CardVideo.defaultProps = {
-  video: "",
+// Setting default values for the props of CardMonitor
+CardMonitor.defaultProps = {
   color: "info",
   description: "",
 };
 
-// Typechecking props for the CardVideo
-// CardVideo.propTypes = {
-//   video: PropTypes.string.isRequired,
-// };
+// Typechecking props for the CardMonitor
+CardMonitor.propTypes = {
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  title: PropTypes.string.isRequired,
+  os: PropTypes.string.isRequired,
+  description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  date: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
 
-export default CardVideo;
+export default CardMonitor;
