@@ -15,7 +15,7 @@ import Header from "layouts/profile/components/Header";
 
 import ReactPlayer from "react-player";
 
-import VideoMedia from "./components/PlatformSettings";
+import VideoFramelayer from "./components";
 
 function VideoPlayer() {
   return (
@@ -26,7 +26,7 @@ function VideoPlayer() {
             <Grid item xs={12} md={6} xl={12} sx={{ display: "flex" }}>
               <Divider orientation="vertical" sx={{ ml: -2, mr: 1 }} />
               {/* <ReactPlayer /> */}
-              <VideoMedia />
+              <VideoFramelayer />
               <Divider orientation="vertical" sx={{ mx: 0 }} />
             </Grid>
           </Grid>

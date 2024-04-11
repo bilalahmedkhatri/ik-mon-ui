@@ -8,8 +8,6 @@
 Coded by www.azeemlab.com
 
  =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
 // but not tested yet with frames {ruf concept}.
@@ -23,9 +21,16 @@ const VideoFramePlayer = () => {
 
   useEffect(() => {
     // WebSocket logic to connect and receive frames
-    const url = `ws://localhost:8765/${APIData}`;
+    const url = `ws://192.168.1.85:8006/${APIData}/web`;
     const ws = new WebSocket(url);
-    ws.onmessage = (event) => setFrameData(event.data); // Update frame data
+    // ws.addEventListener("message", (event) => setFrameData(event.data)); // Update frame data
+    // ws.onmessage = (event) => console.log("result data", event.data); // Update frame data
+    ws.addEventListener("message", (event) => {
+      console.log("Message from server ", event.data);
+    });
+    ws.addEventListener("open", (event) => {
+      ws.send("Hello Server!");
+    });
     return () => ws.close(); // Clean up WebSocket on unmount
   }, []);
 
@@ -33,6 +38,7 @@ const VideoFramePlayer = () => {
 
   return (
     <div>
+      test
       <ReactPlayer controls url={videoSource} />
     </div>
   );
