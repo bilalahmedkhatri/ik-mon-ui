@@ -62,18 +62,18 @@ function Dashboard() {
 
   const [screens, setScreens] = useState([]);
 
-  useEffect(() => {
-    async function getScreens() {
-      try {
-        const screens = await axios.get("/users_monitor_data/");
-        setScreens(screens.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    getScreens();
-    console.log(getScreens());
-  }, []);
+  // useEffect(() => {
+  //   async function getScreens() {
+  //     try {
+  //       const screens = await axios.get("/users_monitor_data/");
+  //       setScreens(screens.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   getScreens();
+  //   console.log(getScreens());
+  // }, []);
 
   return (
     <DashboardLayout>
