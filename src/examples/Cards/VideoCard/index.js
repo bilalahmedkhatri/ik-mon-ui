@@ -15,7 +15,7 @@ import MDTypography from "components/MDTypography";
 // CardMonitor configurations
 // import configs from "examples/Cards/CardMonitor/configs";
 
-function CardMonitor({ video }) {
+function CardMonitor() {
   return (
     <Card sx={{ height: "100%" }}>
       <MDBox padding="1rem">
