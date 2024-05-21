@@ -30,6 +30,7 @@ import axios from "axios";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
+  const [videoTokeData, setVideoTokeData] = useState([]);
 
   const [currentdate, setCurrentDate] = useState(new Date());
   const number_of_live_screens = [
@@ -60,20 +61,19 @@ function Dashboard() {
     },
   ];
 
-  const [screens, setScreens] = useState([]);
-
-  // useEffect(() => {
-  //   async function getScreens() {
-  //     try {
-  //       const screens = await axios.get("/users_monitor_data/");
-  //       setScreens(screens.data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
-  //   getScreens();
-  //   console.log(getScreens());
-  // }, []);
+  useEffect(() => {
+    async function getScreens() {
+      try {
+        const screens = await axios.get("http://localhost:8000/user_api/main/");
+        setVideoTokeData(screens.data);
+        console.log(videoTokeData());
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getScreens();
+    console.log(getScreens());
+  }, []);
 
   return (
     <DashboardLayout>
@@ -140,7 +140,7 @@ function Dashboard() {
             </MDBox>
           </Grid>
         </Grid>
-        <MDBox mt={4.5}>
+        {/* <MDBox mt={4.5}>
           <Grid container spacing={3}>
             {number_of_live_screens.map((e, key) => (
               <Grid item xs={12} md={6} lg={4} key={key}>
@@ -150,6 +150,24 @@ function Dashboard() {
                     title={e.name}
                     os={e.os}
                     date={e.dt}
+                    // date={`campaign ${key} sent days ago`}
+                    image={image_}
+                  />
+                </MDBox>
+              </Grid>
+            ))}
+          </Grid>
+        </MDBox> */}
+        <MDBox mt={4.5}>
+          <Grid container spacing={3}>
+            {videoTokeData.map((e, key) => (
+              <Grid item xs={12} md={6} lg={4} key={key}>
+                <MDBox mb={3}>
+                  <CardMonitor
+                    color={key.name}
+                    title={e.user_name}
+                    os={e.os}
+                    date={e.date_create}
                     // date={`campaign ${key} sent days ago`}
                     image={image_}
                   />

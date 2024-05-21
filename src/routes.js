@@ -38,7 +38,7 @@ Coded by www.azeemlab.com
 // Team Stellar React layouts
 import Dashboard from "layouts/dashboard";
 import UsersTable from "layouts/tables";
-import VideoPlayer from "layouts/video-player";
+import VideoPlayer from "layouts/videoPlayer";
 import Billing from "layouts/billing";
 import RTL from "layouts/rtl";
 import Notifications from "layouts/notifications";
