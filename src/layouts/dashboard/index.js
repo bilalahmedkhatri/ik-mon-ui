@@ -19,6 +19,7 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 // Dashboard components
 // import Projects from "layouts/dashboard/components/Projects";
 // import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+import { Link } from "react-router-dom";
 
 import image from "assets/images/home-decor-2.jpg";
 
@@ -163,14 +164,16 @@ function Dashboard() {
             {videoTokeData.map((e, key) => (
               <Grid item xs={12} md={6} lg={4} key={key}>
                 <MDBox mb={3}>
-                  <CardMonitor
-                    color={key.name}
-                    title={e.user_name}
-                    os={e.os}
-                    date={e.date_create}
-                    // date={`campaign ${key} sent days ago`}
-                    image={image_}
-                  />
+                  <Link to={"/video/" + e.video_url} key={key}>
+                    <CardMonitor
+                      color={key.name}
+                      title={e.user_name}
+                      os={e.os}
+                      date={e.date_create}
+                      // date={`campaign ${key} sent days ago`}
+                      image={image_}
+                    />
+                  </Link>
                 </MDBox>
               </Grid>
             ))}

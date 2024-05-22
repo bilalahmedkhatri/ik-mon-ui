@@ -71,7 +71,7 @@ const routes = [
     name: "Video",
     key: "video",
     icon: <Icon fontSize="small">video_player</Icon>,
-    route: "/video",
+    route: "/video/:hashed",
     component: <VideoPlayer />,
   },
   // {
