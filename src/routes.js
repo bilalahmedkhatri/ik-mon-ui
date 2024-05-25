@@ -39,6 +39,7 @@ Coded by www.azeemlab.com
 import Dashboard from "layouts/dashboard";
 import UsersTable from "layouts/tables";
 import VideoPlayer from "layouts/videoPlayer";
+import Player from "layouts/player";
 import Billing from "layouts/billing";
 import RTL from "layouts/rtl";
 import Notifications from "layouts/notifications";
@@ -70,9 +71,17 @@ const routes = [
     type: "collapse",
     name: "Video",
     key: "video",
-    icon: <Icon fontSize="small">video_player</Icon>,
+    icon: <Icon fontSize="small">VP</Icon>,
     route: "/video/:hashed",
     component: <VideoPlayer />,
+  },
+  {
+    type: "collapse",
+    name: "Player",
+    key: "Player",
+    icon: <Icon fontSize="small">P</Icon>,
+    route: "/player",
+    component: <Player />,
   },
   // {
   //   type: "collapse",

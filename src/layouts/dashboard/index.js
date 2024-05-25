@@ -17,8 +17,8 @@ import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatist
 import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 
 // Dashboard components
-// import Projects from "layouts/dashboard/components/Projects";
-// import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+import Projects from "layouts/dashboard/components/Projects";
+import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 import { Link } from "react-router-dom";
 
 import image from "assets/images/home-decor-2.jpg";
@@ -65,7 +65,7 @@ function Dashboard() {
   useEffect(() => {
     async function getScreens() {
       try {
-        const screens = await axios.get("http://localhost:8000/user_api/main/");
+        const screens = await axios.get("http://192.168.1.85:8000/user_api/main/");
         setVideoTokeData(screens.data);
         console.log(videoTokeData());
       } catch (error) {
@@ -179,7 +179,7 @@ function Dashboard() {
             ))}
           </Grid>
         </MDBox>
-        {/* <MDBox>
+        <MDBox>
           <Grid container spacing={3}>
             <Grid item xs={12} md={12} lg={8}>
               <Projects />
@@ -188,7 +188,7 @@ function Dashboard() {
               <OrdersOverview />
             </Grid>
           </Grid>
-        </MDBox> */}
+        </MDBox>
       </MDBox>
       <Footer />
     </DashboardLayout>

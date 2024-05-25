@@ -14,7 +14,7 @@ function ImagePlayer() {
 
   useEffect(() => {
     const getCompleteVideoLink = async () => {
-      const videoUrlServer = `http://127.0.0.1:5000/${hashed}/video_feed`;
+      const videoUrlServer = `http://192.168.1.85:5000/video_feed/${hashed}`;
       setVideoUrl(videoUrlServer);
     };
 
