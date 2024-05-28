@@ -1,44 +1,115 @@
-# Team Stellar React
+# Monitor App
 
-![Image](https://s3.amazonaws.com/creativetim_bucket/products/71/original/material-dashboard-react.jpg?1638950990)
+## Overview
 
-Team Stellar React is our newest free MUI Admin Template based on React. If you’re a developer looking to create an admin dashboard that is developer-friendly, rich with features, and highly customisable, here is your match. Our innovative MUI & React dashboard comes with a beautiful design inspired by Google's Material Design and it will help you create stunning websites & web apps to delight your clients.
+Monitor App is a comprehensive solution for capturing and managing user screen activity. The application consists of a client-side application that sends screen data to a server, which then processes and stores this data. The backend is managed using Django, and user profiles are integrated with a React frontend via Django REST Framework (DRF).
 
-**Fully Coded Elements**
-Team Stellar React is built with over 70 frontend individual elements, like buttons, inputs, navbars, nav tabs, cards, or alerts, giving you the freedom of choosing and combining. All components can take variations in color, which you can easily modify using MUI styled() API and sx prop. You will save a lot of time going from prototyping to full-functional code because all elements are implemented.
+## Features
 
-This free MUI & React Dashboard is coming with prebuilt design blocks, so the development process is seamless,
-switching from our pages to the real website is very easy to be done.
+- **Client Application**: Captures screen data from users and sends it to the server.
+- **Server Application**: Receives and processes screen data from the client.
+- **Backend Management**: Uses Django to manage user profiles and details, connected to a React app via DRF.
+- **React Frontend**: Provides a user-friendly interface for managing and viewing screen data.
 
-Special thanks go to:
+## Architecture
 
-- [Nepcha Analytics](https://nepcha.com?ref=readme) for the analytics tool. Nepcha is already integrated with Material Dashboard React. You can use it to gain insights into your sources of traffic.
+1. **Client Application**:
 
-**HELPFUL LINKS**
+   - Captures screenshots or screen data at specified intervals.
+   - Sends data to the server securely.
 
-- View [Github Repository](https://github.com/creativetimofficial/material-dashboard-react)
-- Check [FAQ Page](https://www.azeemlab.com/faq)
+2. **Server Application**:
 
-#### Special thanks
+   - Receives screen data from the client.
+   - Processes the data into images and stores them.
 
-During the development of this dashboard, we have used many existing resources from awesome developers. We want to thank them for providing their tools open source:
+3. **Backend Management**:
 
-- [MUI](https://mui.com/) - The React UI library for faster and easier web development.
-- [React ChartJS 2](http://reactchartjs.github.io/react-chartjs-2/#/) - Simple yet flexible React charting for designers & developers.
-- [ChromaJS](https://gka.github.io/chroma.js/) - A small-ish zero-dependency JavaScript library for all kinds of color conversions and color scales.
+   - Manages user profiles and authentication using Django.
+   - Provides API endpoints using DRF for frontend interaction.
 
-Let us know your thoughts below. And good luck with development!
+4. **React Frontend**:
+   - Displays screen data and user profiles.
+   - Connects to the backend via API endpoints.
 
-## Versions
+## Installation
 
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react-logo.png?raw=true" width="60" height="60" />](https://www.azeemlab.com/product/material-dashboard-react?ref=readme-mdr)
+### Prerequisites
 
-| React |
-| ----- |
+- Python 3.x
+- Django
+- Django REST Framework
+- Flask
+- Websockets
+- Numpy
+- Opencv-python
 
-| [![Material Dashboard React](https://s3.amazonaws.com/creativetim_bucket/products/71/thumb/material-dashboard-react.jpg?1638950990)](http://demos.azeemlab.com/material-dashboard-react/#/dashboard?ref=readme-mdr)
+### Backend (Server)
 
-## Terminal Commands
+1. **Clone the repository**:
 
-1. Download and Install NodeJs LTS version from [NodeJs Official Page](https://nodejs.org/en/download/) "Recommanded 20.0".
-2. Navigate to the root ./ directory of the product and run `yarn install` or `npm install` to install our local dependencies.
+   ```bash
+   git clone
+   cd server
+   ```
+
+2. **Set up a virtual environment using Pipenv**:
+
+   ```bash
+   pip install pipenv
+   pipenv shell
+   pipenv install
+   ```
+
+### Backend Setup (Django)
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone
+   cd Backend_Frontend
+   ```
+
+2. **Set up a virtual environment using Pipenv**:
+
+   ```bash
+   pip install pipenv
+   pipenv install
+   pipenv shell
+   ```
+
+3. **Run migrations**:
+
+   ```bash
+   python manage.py migrate
+   ```
+
+4. **Create a superuser**:
+
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+   - User Name : admin
+   - password : admin
+
+5. **Start the server**:
+   ```bash
+   python manage.py runserver
+   ```
+
+## Contributing
+
+Contributions are welcome! Please fork this repository and submit pull requests.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or inquiries, please contact bilal.azeemlab@gmail.com
+
+---
+
+By following this README, developers can understand the setup, usage, and architecture of the Monitor App, making it easier to contribute and utilize the application effectively.

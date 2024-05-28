@@ -19,11 +19,12 @@ function ImagePlayer() {
     };
 
     getCompleteVideoLink();
-  }, []);
+  }, [hashed]);
 
   return (
     <MDBox mt={5} mb={3}>
       <Grid container spacing={1} direction="row" justifyContent="center" alignItems="center">
+        {/* {videoUrl === "" && () : ()} */}
         <CardMedia
           component="img"
           display="flex"
