@@ -16,17 +16,20 @@ import image_ from "assets/images/home-decor-2.jpg";
 import CardMonitor from "examples/Cards/CardMonitor";
 import axios from "axios";
 
+import USER from "apis/user";
+
 function Dashboard() {
   const [videoTokeData, setVideoTokeData] = useState([]);
 
   useEffect(() => {
+    USER("user_api/main/");
     async function getScreens() {
       try {
-        const screens = await axios.get("http://192.168.1.85:8000/user_api/main/");
+        const screens = await axios.get("http://localhost:8000/user_api/main/");
         setVideoTokeData(screens.data);
         console.log(videoTokeData());
       } catch (error) {
-        console.log(error);
+        console.log("errors s", error);
       }
     }
     getScreens();
