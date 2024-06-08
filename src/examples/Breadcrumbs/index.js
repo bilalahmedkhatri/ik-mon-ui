@@ -72,7 +72,7 @@ function Breadcrumbs({ icon, title, route, light }) {
           color={light ? "white" : "dark"}
           sx={{ lineHeight: 0 }}
         >
-          {title.replace("-", " ")}
+          {route.includes("video") ? "" : title.replace("-", " ")}
         </MDTypography>
       </MuiBreadcrumbs>
       <MDTypography
@@ -82,7 +82,7 @@ function Breadcrumbs({ icon, title, route, light }) {
         color={light ? "white" : "dark"}
         noWrap
       >
-        {title.replace("-", " ")}
+        {route.includes("video") ? "Video" : title.replace("-", " ")}
       </MDTypography>
     </MDBox>
   );

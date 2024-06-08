@@ -22,12 +22,12 @@ function Dashboard() {
   const [videoTokeData, setVideoTokeData] = useState([]);
 
   useEffect(() => {
-    USER("user_api/main/");
+    // USER("user_api/main/");
     async function getScreens() {
       try {
         const screens = await axios.get("http://localhost:8000/user_api/main/");
         setVideoTokeData(screens.data);
-        console.log(videoTokeData());
+        console.log("apis", videoTokeData());
       } catch (error) {
         console.log("errors s", error);
       }

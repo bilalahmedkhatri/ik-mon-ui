@@ -53,7 +53,7 @@ export default function App() {
   const [onMouseEnter, setOnMouseEnter] = useState(false);
   const [rtlCache, setRtlCache] = useState(null);
   const { pathname } = useLocation();
-  console.log("location ", pathname);
+
   // Cache for the rtl
   useMemo(() => {
     const cacheRtl = createCache({
@@ -90,6 +90,7 @@ export default function App() {
 
   // Setting page scroll to 0 when changing the route
   useEffect(() => {
+    console.log("docs", document.scrollingElement);
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
   }, [pathname]);
