@@ -1,1 +1,0 @@
-function Address() { const fromUrl = window.location.href; }

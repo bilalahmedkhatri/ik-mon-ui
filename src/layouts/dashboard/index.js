@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import { getBackData } from "apis/backend";
+
 // @mui material components
 import Grid from "@mui/material/Grid";
 
@@ -14,26 +16,24 @@ import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatist
 // Dashboard components
 import image_ from "assets/images/home-decor-2.jpg";
 import CardMonitor from "examples/Cards/CardMonitor";
-import axios from "axios";
-
-import USER from "apis/user";
+import { Typography } from "@mui/material";
 
 function Dashboard() {
-  const [videoTokeData, setVideoTokeData] = useState([]);
+  const [videoTokenData, setVideoTokenData] = useState([]);
+  const [totalScreenLive, setTotalScreenLive] = useState(0);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    // USER("user_api/main/");
     async function getScreens() {
-      try {
-        const screens = await axios.get("http://localhost:8000/user_api/main/");
-        setVideoTokeData(screens.data);
-        console.log("apis", videoTokeData());
-      } catch (error) {
-        console.log("errors s", error);
+      const { bStatus, bRes } = await getBackData("/user_api/main/");
+      if (bStatus === "success") {
+        setVideoTokenData(bRes);
+        setTotalScreenLive(bRes.length);
+      } else if (bStatus === "fail") {
+        setError(bRes);
       }
     }
     getScreens();
-    console.log(getScreens());
   }, []);
 
   return (
@@ -62,10 +62,10 @@ function Dashboard() {
                 color="primary"
                 icon="person_add"
                 title="Online"
-                count="4"
+                count={totalScreenLive}
                 percentage={{
                   color: "success",
-                  amount: "",
+                  amount: `+${totalScreenLive - 1}`,
                   label: "Just updated",
                 }}
               />
@@ -74,7 +74,7 @@ function Dashboard() {
         </Grid>
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
-            {videoTokeData.map((e, key) => (
+            {videoTokenData.map((e, key) => (
               <Grid item xs={12} md={6} lg={4} key={key}>
                 <MDBox mb={3}>
                   <Link to={"/video/" + e.video_url} hash={e.video_url} key={key}>
@@ -90,6 +90,13 @@ function Dashboard() {
                 </MDBox>
               </Grid>
             ))}
+            {error && (
+              <Grid item xs={12} md={12} lg={12}>
+                <MDBox mb={3}>
+                  <Typography px={1}>Not any user online or {error}...</Typography>
+                </MDBox>
+              </Grid>
+            )}
           </Grid>
         </MDBox>
       </MDBox>
