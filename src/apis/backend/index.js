@@ -12,7 +12,7 @@ const apiBackend = axios.create({
 export async function getBackData(endpoint) {
   try {
     const bResponse = await apiBackend.get(endpoint);
-    return { bStatus: "success", bRes: response.data };
+    return { bStatus: "success", bRes: bResponse.data };
   } catch (error) {
     return { bStatus: "fail", bRes: "server not running" };
   }

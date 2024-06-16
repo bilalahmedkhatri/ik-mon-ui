@@ -28,9 +28,10 @@ function Dashboard() {
       const { bStatus, bRes } = await getBackData("/user_api/main/");
       if (bStatus === "success") {
         setVideoTokenData(bRes);
-        setTotalScreenLive(bRes.length);
+        // setTotalScreenLive(bRes);
       } else if (bStatus === "fail") {
         setError(bRes);
+        console.log("failes");
       }
     }
     getScreens();

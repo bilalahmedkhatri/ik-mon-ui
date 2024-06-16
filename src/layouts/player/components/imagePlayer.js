@@ -4,12 +4,14 @@ import Grid from "@mui/material/Grid";
 
 // Team Stellar React components
 import MDBox from "components/MDBox";
-import { CardMedia } from "@mui/material";
+import { Card, CardMedia } from "@mui/material";
 import { useParams } from "react-router-dom";
+import styled from "@emotion/styled";
 
 function ImagePlayer() {
   const [videoUrl, setVideoUrl] = useState("");
   const [imgWidth, setImgWidth] = useState(1280);
+  const [buffer, NotBuffer] = useState(false);
   const { hashed } = useParams();
 
   useEffect(() => {
@@ -21,15 +23,19 @@ function ImagePlayer() {
     getCompleteVideoLink();
   }, [hashed]);
 
+  const StyleCardMedia = styled(CardMedia)({
+    component: "img",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  });
+
   return (
     <MDBox mt={5} mb={3}>
       <Grid container spacing={1} direction="row" justifyContent="center" alignItems="center">
         {/* {videoUrl === "" && () : ()} */}
-        <CardMedia
+        <StyleCardMedia
           component="img"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
           sx={{
             color: "success.main",
             maxWidth: imgWidth,
