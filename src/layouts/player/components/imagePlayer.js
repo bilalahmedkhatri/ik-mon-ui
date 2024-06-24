@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 
 // Team Stellar React components
 import MDBox from "components/MDBox";
-import { Card, CardMedia } from "@mui/material";
+import { CardMedia } from "@mui/material";
 import { useParams } from "react-router-dom";
 import styled from "@emotion/styled";
 

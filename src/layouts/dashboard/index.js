@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { getBackData } from "apis/backend";
+// import { getBackData } from "apis/backend";
 
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -19,23 +19,23 @@ import CardMonitor from "examples/Cards/CardMonitor";
 import { Typography } from "@mui/material";
 
 function Dashboard() {
-  const [videoTokenData, setVideoTokenData] = useState([]);
-  const [totalScreenLive, setTotalScreenLive] = useState(0);
-  const [error, setError] = useState("");
+  // const [videoTokenData, setVideoTokenData] = useState([]);
+  // const [totalScreenLive, setTotalScreenLive] = useState(0);
+  // const [error, setError] = useState("");
 
-  useEffect(() => {
-    async function getScreens() {
-      const { bStatus, bRes } = await getBackData("/user_api/main/");
-      if (bStatus === "success") {
-        setVideoTokenData(bRes);
-        // setTotalScreenLive(bRes);
-      } else if (bStatus === "fail") {
-        setError(bRes);
-        console.log("failes");
-      }
-    }
-    getScreens();
-  }, []);
+  // useEffect(() => {
+  //   async function getScreens() {
+  //     const { bStatus, bRes } = await getBackData("/user_api/main/");
+  //     if (bStatus === "success") {
+  //       setVideoTokenData(bRes);
+  //       // setTotalScreenLive(bRes);
+  //     } else if (bStatus === "fail") {
+  //       setError(bRes);
+  //       console.log("failes");
+  //     }
+  //   }
+  //   getScreens();
+  // }, []);
 
   return (
     <DashboardLayout>

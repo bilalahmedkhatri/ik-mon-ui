@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Team Stellar React - v2.2.0
-=========================================================
-
-* Product Page: https://www.azeemlab.com/product/material-dashboard-react
-* Copyright 2023 AzeemLab (https://www.azeemlab.com)
-
-Coded by www.azeemlab.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
@@ -23,7 +8,6 @@ import Grid from "@mui/material/Grid";
 import MDBox from "components/MDBox";
 
 // Team Stellar React example components
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Authentication pages components
@@ -32,14 +16,6 @@ import Footer from "layouts/authentication/components/Footer";
 function BasicLayout({ image, children }) {
   return (
     <PageLayout>
-      <DefaultNavbar
-        action={{
-          type: "external",
-          route: "https://azeemlab.com/product/material-dashboard-react",
-          label: "free download",
-          color: "dark",
-        }}
-      />
       <MDBox
         position="absolute"
         width="100%"
@@ -63,7 +39,7 @@ function BasicLayout({ image, children }) {
           </Grid>
         </Grid>
       </MDBox>
-      <Footer light />
+      <Footer />
     </PageLayout>
   );
 }
